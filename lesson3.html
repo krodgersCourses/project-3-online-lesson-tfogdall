@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <head>
+    <title>Calculus Must-Knows</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="big-container">
+      <h1>DESMOS MUST-KNOWS | LESSON 3 -- SUMMATION</h1>
+      <nav class="flex-container">
+        <a href="index.html" class="flex-item-one">LESSON OVERVIEW</a>
+        <a href="lesson1.html" class="flex-item-two">LESSON 1 -- DIFFERENTIATION</a>
+        <a href="lesson2.html" class="flex-item-three">LESSON 2 -- INTEGRATION</a>
+        <a href="lesson3.html" class="flex-item-four-focused">LESSON 3 -- SUMMATION</a>
+        <a href="lesson4.html" class="flex-item-five">LESSON 4 -- PARAMETRIC</a>
+        <a href="quiz.html" class="flex-item-six">QUIZ -- MUST-KNOWS</a>
+      </nav>
+      <article>
+        <p>
+          Here's where Lesson 3 will go
+        </p>
+        
+        <ol>
+          <li>On line one ...</li>
+        </ol>
+        <p>
+          Final Value: <input type="text" id="lesson3Value" value="">
+        </p>
+        <p>
+          <button onclick="checkLesson3()">Check it!</button><span id="lesson3Response"></span>
+        </p>
+      <div id="calculator"></div>
+      <script>
+        var elt = document.getElementById('calculator');
+        var calculator = Desmos.GraphingCalculator(elt);
+        function checkLesson2() {
+          var x = document.getElementById("lesson3Value").value;
+          if(x=="70.093") {document.getElementById("lesson3Response").innerHTML=" Good job! 70.093 is right!";}
+          else {document.getElementById("lesson3Response").innerHTML=" Try again."};
+        }
+      </script>
+    </article>
+    </div>
+  </body>
+</html> 

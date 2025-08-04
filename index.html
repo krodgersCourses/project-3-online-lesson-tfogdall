@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
   <head>
-    <title>Page Title</title>
+    <title>Calculus Must-Knows</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    
-    <h1>This is Todd's Online Lesson Website</h1>
-    <p>Maybe a site to interact with Desmos?</p>
-
-
+    <div class="big-container">
+      <h1>DESMOS MUST-KNOWS | OVERVIEW & ROUNDING</h1>
+      <nav class="flex-container">
+        <a href="index.html" class="flex-item-one-focused">LESSON OVERVIEW</a>
+        <a href="lesson1.html" class="flex-item-two">LESSON 1 -- DIFFERENTIATION</a>
+        <a href="lesson2.html" class="flex-item-three">LESSON 2 -- INTEGRATION</a>
+        <a href="lesson3.html" class="flex-item-four">LESSON 3 -- SUMMATION</a>
+        <a href="lesson4.html" class="flex-item-five">LESSON 4 -- PARAMETRIC</a>
+        <a href="quiz.html" class="flex-item-six">QUIZ -- MUST-KNOWS</a>
+      </nav>
+      <article>
+        <p>
+          2026 will be the second year that students taking the AP Calculus exams (AB & BC) 
+          will have access to the Desmos graphing calculator. Complete these lessons to learn
+          the must-know functions to maximize your success on the exam. The first two lessons assume 
+          that you already have first semester (Calc 1 or AB) skills in hand, but the final two
+          lessons are second semester (Calc 2 or BC) skills, so don't worry if those tasks are new
+          to you.
+        </p>
+        <p>
+          For each lesson, you will use the embedded Desmos calculator to follow the instructions. 
+          When you finish, enter your answers into the quiz to see how you did. Note that the calculators
+          embedded in this site do not retain their state, so your work will not be viewable by anyone,
+          yourself included if you navigate away from the page. As a result, be sure to check your work 
+          before moving on to the next lesson.
+        </p>
+        <p>
+          As is the expectation on either of the AP Calculus exams, students should use three-digit accuracy.
+          To practice before beginning the first lesson, follow these steps using the calculator.
+        </p>
+        <ol>
+          <li>On line one, define a cubic function by typing "f(x)=x^3".</li>
+          <li>On line two, define "a=sqrt{17}".</li>
+          <li>On line three, input the <i>rounded</i> previous value into the function by typing "f(4.123)".</li>
+          <li>On line four, input the entire previous value into the function by typing "f(a)".</li>
+          <li>In the textbox below the calculator, input this value <i>rounded</i> to three decimal place accuracy. (Note
+            that there is indeed a difference.)
+          </li>
+          <li>Click the button to confirm that you found this value correctly.</li>
+        </ol>
+        <p>
+          Final Value: <input type="text" id="overviewValue" value="">
+        </p>
+        <p>
+          <button onclick="checkOverview()">Check it!</button><span id="overviewResponse"></span>
+        </p>
+      <div id="calculator"></div>
+      <script>
+        var elt = document.getElementById('calculator');
+        var calculator = Desmos.GraphingCalculator(elt);
+        function checkOverview() {
+          var x = document.getElementById("overviewValue").value;
+          if(x=="70.093") {document.getElementById("overviewResponse").innerHTML=" Good job! 70.093 is right!";}
+          else {document.getElementById("overviewResponse").innerHTML=" Try again."};
+        }
+      </script>
+    </article>
+    </div>
   </body>
 </html> 
