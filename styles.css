@@ -127,7 +127,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 }
 
 .flex-item-six {
-  background-color: #707a84;
+  background-color: #106836;
   padding: 5px;
   flex: 17%;
   color: white;
@@ -135,10 +135,10 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 }
 
 .flex-item-six-focused {
-  background-color: #005eb8;
+  background-color: white;
   padding: 5px;
   flex: 16%;
-  color: black;
+  color: #106836;
   border-style: solid;
 }
 

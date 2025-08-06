@@ -18,14 +18,21 @@
       </nav>
       <article>
         <p>
-          Here's where Lesson 2 will go
+          Recall that a definite integral gives the net change of the function's antiderivative, and Desmos can estimate them with high accuracy.
+          Definite integrals can be interpreted in many ways, most commonly as an accumulation of "area" between the curve and the x-axis. Recall, however,
+          that this is true only when the function is nonnegative and integrable over the closed interval formed by the limits of integration.
         </p>
-        
         <ol>
-          <li>On line one ...</li>
+          <li>On line 1, type "f(x)=x*ln{x}"</li>
+          <li>On line 2, type "int", which will give a template for a definite integral. Enter 0 and 3 as the lower and upper limits, and "f(x)dx" as the
+            integrand.</li>
+          <li>Note that this integral has two unusual features. Consider: What is true about the value of the integrand at the lower limit of integration?
+            Does the value that Desmos gives equal the area of the region bounded by the function and x-axis from x=0 to x=3?
+          </li>
+          <li>Input the value of the integral, accurate to three decimal places, and click the button to check your work.</li>
         </ol>
         <p>
-          Final Value: <input type="text" id="lesson2Value" value="">
+          Definite Integral Value: <input type="text" id="lesson2Value" value="">
         </p>
         <p>
           <button onclick="checkLesson2()">Check it!</button><span id="lesson2Response"></span>
@@ -36,7 +43,7 @@
         var calculator = Desmos.GraphingCalculator(elt);
         function checkLesson2() {
           var x = document.getElementById("lesson2Value").value;
-          if(x=="70.093") {document.getElementById("lesson2Response").innerHTML=" Good job! 70.093 is right!";}
+          if(x=="2.694") {document.getElementById("lesson2Response").innerHTML=" Good job! 2.694 is right!";}
           else {document.getElementById("lesson2Response").innerHTML=" Try again."};
         }
       </script>

@@ -18,14 +18,26 @@
       </nav>
       <article>
         <p>
-          Here's where Lesson 1 will go
+          Recall that a function's derivative gives the instantaneous rate of change of the function at various instances of its domain. While Desmos does not
+          calculate derivatives symbolically, it can accurately estimate them. Specific values of the derivative can be used to write equations for tangent
+          lines.
         </p>
         
         <ol>
-          <li>On line one ...</li>
+          <li>On line 1, define our function by typing "f(x)=e^x*sin(x)"</li>
+          <li>On line 2, type "a=1". (Note that a slider is constructed.)</li>
+          <li>On line 3, type "d=f'(a)". This step could be skipped, but it's nice to see what the value of the derivative is at x=a.</li>
+          <li>On line 4, generate the line tangent to the function at x=a by typing "g(x)=d(x-a)+f(a)".</li>
+          <li>Use the slider to change the value of a on line 2. Note that the tangent line moves. Then, set the value of a to "3pi/4", which is 
+            one of the values for which the tangent line is horizontal.
+          </li>
+          <li>The functions f and g intersect between 6 and 7. Click on one of the functions and observes that this intersection point appears in gray.
+            Hover over it until its coordinates appear, as well as an icon that allows you to export this point to the expression list. Click it.</li>
+          <li>Type the x-coordinate of this point into the input box, rounded to the third decimal place.</li>
+          <li>Click the button to check if this value is correct.</li>
         </ol>
         <p>
-          Final Value: <input type="text" id="lesson1Value" value="">
+          x-value of intersection: <input type="text" id="lesson1Value" value="">
         </p>
         <p>
           <button onclick="checkLesson1()">Check it!</button><span id="lesson1Response"></span>
@@ -36,7 +48,7 @@
         var calculator = Desmos.GraphingCalculator(elt);
         function checkLesson1() {
           var x = document.getElementById("lesson1Value").value;
-          if(x=="70.093") {document.getElementById("lesson1Response").innerHTML=" Good job! 70.093 is right!";}
+          if(x=="6.297") {document.getElementById("lesson1Response").innerHTML=" Good job! 6.297 is right!";}
           else {document.getElementById("lesson1Response").innerHTML=" Try again."};
         }
       </script>
