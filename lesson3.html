@@ -18,15 +18,38 @@
       </nav>
       <article>
         <p>
-          Here's where Lesson 3 will go
+          Calculus sometimes studies objects called series, which are most often defined as a summation of an infinite sequence. Series can <i>converge</i> 
+          to a limiting number, or not. When they don't converge, we say the <i>diverge</i>. There are a variety of tests we can use to determine whether they
+          converge, but fundamentally, it all depends on the series' <i>sequence of partial sums</i>, which this lesson will show you how to set up in Desmos.
         </p>
         
         <ol>
-          <li>On line one ...</li>
+          <li>On line one, enter the real-valued function "f(x)=1/x". We actually don't need to graph this function, though, so click the dot icon to turn off its graph.</li>
+          <li>On line two, type "n=1". Define its minimum and maximum values as 1 and 10000, and set the step to 1. A slider will be generated. (Note: Desmos only supports lists
+            of 10000 elements, thus the reason for the maximum value of n.)
+          </li>
+          <li>On line three, define a list of counting numbers from 1 to n by typing "K=[1...n]". See that the list updates as you change the value of n.</li>
+          <li>On line four, define the partial sums for the function you entered on line 1 by typing "S=sum". Desmos will change the word sum into sigma notation, at which
+            point you should change the lower limit of the summation to "k=1" and the upper limit (above the sigma) to "K". Finally, to the right of the sigma, type "f(k)". 
+            Since these may be new to you, let's discuss what you've just generated.<br><br>Summation notation means to substitute all of the values from the lower limit to the upper
+            limit into the function, and then add them up. Since we defined the upper limit of the sum as a list/sequence, this has also given us a list/sequence.
+            <br><br>To better understand this, make sure that the value of n is 1. S will be a list of only one element, 1/1=1. Now set n=3, and you'll see that it is now
+            a list of three elements. 1/1=1, 1/1+1/2=1.5, and 1/1+1/2+1/3=1.83333333... If you now change n to n=4, the next partial sum in the sequence will be generated.<br><br>
+          </li>
+          <li>Everything will be easier to understand if we put it in a table, which is easy to do in Desmos. Click the "+" icon at the top left corner and choose table. 
+            Change x_1 to K, and y_1 to S. Notice that Desmos now plots these coordinate pairs, and you can click the magnifying glass icon to the left of the table to have
+            Desmos zoom for you.<br><br>
+            Change the value of n to n=100. Notice that the table omits part of the sequence, but clicking the magnifying glass will change the view. You should see that the 
+            partial sums now reach 5.1873775, so they are increasing at a slower rate, but still increasing. (I'll let you guess whether this sequence of partial sums converges or diverges.)<br><br>
+          </li>
+          <li>We did a lot to set this up, but let's see how easy it is to change to a different function. Back on line 1, change the function to "1/x^2". You will see the table change, and you 
+            should also notice that the sequence appears to be approaching a horizontal asymptote. (I'll let you guess whether this sequence converges or diverges.)
+          </li>
+          <li>With n=100, enter the final value from this sequence of partial sums. Then check your work.</li>
         </ol>
         <p>
           Final Value: <input type="text" id="lesson3Value" value="">
-        </p>
+        </p> 
         <p>
           <button onclick="checkLesson3()">Check it!</button><span id="lesson3Response"></span>
         </p>
@@ -34,9 +57,9 @@
       <script>
         var elt = document.getElementById('calculator');
         var calculator = Desmos.GraphingCalculator(elt);
-        function checkLesson2() {
+        function checkLesson3() {
           var x = document.getElementById("lesson3Value").value;
-          if(x=="70.093") {document.getElementById("lesson3Response").innerHTML=" Good job! 70.093 is right!";}
+          if(x=="1.635") {document.getElementById("lesson3Response").innerHTML=" Good job! 1.635 is right!";}
           else {document.getElementById("lesson3Response").innerHTML=" Try again."};
         }
       </script>
