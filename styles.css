@@ -12,7 +12,7 @@ body {
 }
 
 .big-container {
-    width: 100%;
+    width: 90%;
     text-align: center;
     font-size: 1em;
 }
@@ -49,7 +49,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-one {
   background-color: #707a84;
   padding: 5px;
-  flex: 16%;
+  flex: 25%;
   color: white;
   border-style: solid;
 }
@@ -57,7 +57,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-one-focused {
   background-color: #005eb8;
   padding: 5px;
-  flex: 16%;
+  flex: 25%;
   color: black;
   border-style: solid;
 }
@@ -65,7 +65,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-two {
   background-color: #707a84;
   padding: 5px;
-  flex: 17%;
+  flex: 25%;
   color: white;
   border-style: solid;
 }
@@ -73,7 +73,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-two-focused {
   background-color: #005eb8;
   padding: 5px;
-  flex: 17%;
+  flex: 25%;
   color: black;
   border-style: solid;
 }
@@ -81,7 +81,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-three {
   background-color: #707a84;
   padding: 5px;
-  flex: 17%;
+  flex: 25%;
   color: white;
   border-style: solid;
 }
@@ -89,7 +89,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-three-focused {
   background-color: #005eb8;
   padding: 5px;
-  flex: 17%;
+  flex: 25%;
   color: black;
   border-style: solid;
 }
@@ -97,7 +97,7 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-four {
   background-color: #707a84;
   padding: 5px;
-  flex: 17%;
+  flex:25%;
   color: white;
   border-style: solid;
 }
@@ -105,40 +105,8 @@ flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
 .flex-item-four-focused {
   background-color: #005eb8;
   padding: 5px;
-  flex: 17%;
+  flex: 25%;
   color: black;
-  border-style: solid;
-}
-
-.flex-item-five {
-  background-color: #707a84;
-  padding: 5px;
-  flex: 17%;
-  color: white;
-  border-style: solid;
-}
-
-.flex-item-five-focused {
-  background-color: #005eb8;
-  padding: 5px;
-  flex: 17%;
-  color: black;
-  border-style: solid;
-}
-
-.flex-item-six {
-  background-color: #106836;
-  padding: 5px;
-  flex: 17%;
-  color: white;
-  border-style: solid;
-}
-
-.flex-item-six-focused {
-  background-color: white;
-  padding: 5px;
-  flex: 16%;
-  color: #106836;
   border-style: solid;
 }
 
